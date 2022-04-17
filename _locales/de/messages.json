@@ -1,0 +1,230 @@
+{
+  "appName": {
+    "message": "MultiWindow Phương Đông",
+    "description": ""
+  },
+  "appDescription": {
+    "message": "",
+    "description": ""
+  },
+  "OPTIONS_TITLE": {
+    "message": "Phương Đông WINDOW",
+    "description": ""
+  },
+  "TAB_SETTINGS": {
+    "message": "Regeln",
+    "description": ""
+  },
+  "TAB_POSITIONS": {
+    "message": "Benutzerdefinierte Positionen",
+    "description": ""
+  },
+  "CUSTOM": {
+    "message": "Benutzerdefinierte",
+    "description": ""
+  },
+  "WIDTH": {
+    "message": "Lange",
+    "description": ""
+  },
+  "HEIGHT": {
+    "message": "Hohe",
+    "description": ""
+  },
+  "ACTIVE": {
+    "message": "Aktiv",
+    "description": ""
+  },
+  "NAME": {
+    "message": "Name",
+    "description": ""
+  },
+  "URL": {
+    "message": "URL",
+    "description": ""
+  },
+  "REMEMBER": {
+    "message": "Merken",
+    "description": ""
+  },
+  "MONITOR": {
+    "message": "Monitor",
+    "description": ""
+  },
+  "POSITION": {
+    "message": "Position",
+    "description": ""
+  },
+  "PLAIN": {
+    "message": "Ebene",
+    "description": ""
+  },
+  "EDIT_TAB_RULE": {
+    "message": "Regel bearbeiten",
+    "description": ""
+  },
+  "DELETE_TAB_RULE": {
+    "message": "Regel löschen",
+    "description": ""
+  },
+  "MOVE_UP": {
+    "message": "Nach oben",
+    "description": ""
+  },
+  "MOVE_DOWN": {
+    "message": "Nach unten",
+    "description": ""
+  },
+  "NEW_TAB_OPTION_TITLE": {
+    "message": "Neuer Tab",
+    "description": ""
+  },
+  "EDIT_TAB_OPTION_TITLE": {
+    "message": "Tab-Regel bearbeiten",
+    "description": ""
+  },
+  "TEMPLATE": {
+    "message": "Vorlage",
+    "description": ""
+  },
+  "PLAIN_WINDOW": {
+    "message": "Ebene Fenster",
+    "description": ""
+  },
+  "ADD": {
+    "message": "Hinzufügen",
+    "description": ""
+  },
+  "UPDATE": {
+    "message": "Aktualisieren",
+    "description": ""
+  },
+  "CANCEL": {
+    "message": "Abbrechen",
+    "description": ""
+  },
+  "IMPORT_TEMPLATE": {
+    "message": "Vorlage importieren",
+    "description": ""
+  },
+  "TEMPLATE_URL": {
+    "message": "Vorlagen-URL",
+    "description": ""
+  },
+  "REPLACE_ALL_TEMPLATES": {
+    "message": "Ersetzen Sie alle Vorlage",
+    "description": ""
+  },
+  "ADD_TAB_OPTION": {
+    "message": "Regel hinzufügen",
+    "description": ""
+  },
+  "SAVE": {
+    "message": "Speichern",
+    "description": ""
+  },
+  "UNDO": {
+    "message": "Rücksetzen",
+    "description": ""
+  },
+  "RELOAD": {
+    "message": "Neu laden",
+    "description": ""
+  },
+  "EXPORT_TEMPLATE": {
+    "message": "Exportvorlage",
+    "description": ""
+  },
+  "SHOW_MORE_OPTIONS": {
+    "message": "Weitere Optionen anzeigen",
+    "description": ""
+  },
+  "VALIDATE_RULES": {
+    "message": "Überprüfen alle existierende Regel",
+    "description": ""
+  },
+  "DETECT_MONITORS": {
+    "message": "Monitore erkennen",
+    "description": ""
+  },
+  "AUTO_REPAIR_RULES": {
+    "message": "Reparieren",
+    "description": ""
+  },
+  "FULLSIZE": {
+    "message": "Fullsize",
+    "description": ""
+  },
+  "MAXIMIZED": {
+    "message": "Maximiert",
+    "description": ""
+  },
+  "LEFT_HALF": {
+    "message": "linke Hälfte",
+    "description": ""
+  },
+  "RIGHT_HALF": {
+    "message": "rechte Hälfte",
+    "description": ""
+  },
+  "TOP_HALF": {
+    "message": "obere Hälfte",
+    "description": ""
+  },
+  "BOTTOM_HALF": {
+    "message": "untere Hälfte",
+    "description": ""
+  },
+  "DEFAULT_MONITOR": {
+    "message": "Standardmonitor",
+    "description": ""
+  },
+  "MAIN_MONITOR": {
+    "message": "Hauptmonitor",
+    "description": ""
+  },
+  "NOT_MAIN_MONITOR": {
+    "message": "Nicht Hauptmonitor",
+    "description": ""
+  },
+  "BIGGEST_RESOLUTION": {
+    "message": "Größte Auflösung",
+    "description": ""
+  },
+  "BIGGEST_HEIGHT": {
+    "message": "Größte Höhe",
+    "description": ""
+  },
+  "BIGGEST_WIDTH": {
+    "message": "Größte Breite",
+    "description": ""
+  },
+  "SMALLEST_RESOLUTION": {
+    "message": "Kleinste Auflösung",
+    "description": ""
+  },
+  "SMALLEST_HEIGHT": {
+    "message": "Kleinste Höhe",
+    "description": ""
+  },
+  "SMALLEST_WIDTH": {
+    "message": "Kleinste Breite",
+    "description": ""
+  },
+  "RULE_NAME_PLACEHOLDER": {
+    "message": "Geben Sie einen Regelnamen ein...",
+    "description": ""
+  },
+  "DRAFT": {
+    "message": "Entwurf",
+    "description": ""
+  },
+  "ADD_POSITION": {
+    "message": "Fügen Sie eine benutzerdefinierte Position hinzu",
+    "description": ""
+  },
+  "REMOVE_POSITION": {
+    "message": "Entfernen Sie die benutzerdefinierte Position",
+    "description": ""
+  }
+}
