@@ -90,9 +90,10 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
 
     function w() { so.showNewTabOption = !1, so.showEditTabOption = !1 }
 
-    function S() { 
+    function S() {
         console.log('update tab option');
-        so.showEditTabOption = !1, so.options.tabs[so.editTabOptionIdx] = { active: so.newTabOption.active, code: so.newTabOption.code, remember: so.newTabOption.remember, url: so.newTabOption.url, name: so.newTabOption.name, monitor: so.newTabOption.monitor, fullScreen: so.newTabOption.fullScreen, popup: so.newTabOption.popup, position: so.newTabOption.position ? so.newTabOption.position.id : Oo.CENTER.id, defaultMonitor: so.newTabOption.defaultMonitor ? so.newTabOption.defaultMonitor.id : Eo.MAIN_MONITOR.id, timestamp: (new Date).toISOString() }, so.editTabOptionIdx = -1, y(), H() }
+        so.showEditTabOption = !1, so.options.tabs[so.editTabOptionIdx] = { active: so.newTabOption.active, code: so.newTabOption.code, remember: so.newTabOption.remember, url: so.newTabOption.url, name: so.newTabOption.name, monitor: so.newTabOption.monitor, fullScreen: so.newTabOption.fullScreen, popup: so.newTabOption.popup, position: so.newTabOption.position ? so.newTabOption.position.id : Oo.CENTER.id, defaultMonitor: so.newTabOption.defaultMonitor ? so.newTabOption.defaultMonitor.id : Eo.MAIN_MONITOR.id, timestamp: (new Date).toISOString() }, so.editTabOptionIdx = -1, y(), H()
+    }
 
     function N() {
         try { so.options.tabs.push({ active: so.newTabOption.active, code: so.newTabOption.code, remember: so.newTabOption.remember, url: so.newTabOption.url, name: so.newTabOption.name, monitor: so.newTabOption.monitor, fullScreen: so.newTabOption.fullScreen, popup: so.newTabOption.popup, position: so.newTabOption.position ? so.newTabOption.position.id : Oo.CENTER.id, defaultMonitor: so.newTabOption.defaultMonitor ? so.newTabOption.defaultMonitor.id : Eo.MAIN_MONITOR.id, timestamp: (new Date).toISOString() }), so.showNewTabOption = !1, y(), H() } catch (o) {
@@ -106,23 +107,27 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
         }
     }
     //
-    function R() { 
-        chrome.storage.local.set({ lo: JSON.stringify(so.options) }), G()
-     }
+    function R() {
+        var data = JSON.stringify(so.options);
+        chrome.storage.local.set({ 'TAB_HELPER_OPTIONS': data }, function () {
+            console.log("object stored", data);
+        }), G()
+    }
 
     function H() { so.dirty = !0 }
 
     function G() { so.dirty = !1 }
 
     function v() {
-        try {
-     
-            var o = localStorage[lo];
-
-            o ? (so.options = JSON.parse(o), so.options.tabs || (so.options.tabs = []), so.options.positions || (so.options.positions = []), G()) : (so.options = { tabs: [], positions: [] }, H()), (!so.options.templates || so.options.templates.length <= 0) && (so.options.templates = Q())
-        } catch (e) {
-            (console.error || console.log).call(console, e.stack || e)
-        } return so.showsHelp || 0 !== so.options.tabs.length || (so.showsHelp = !0), so.options
+        return chrome.storage.local.get("TAB_HELPER_OPTIONS", function (obj) {
+            try {
+                console.log("dấdawdasd", obj.TAB_HELPER_OPTIONS);
+                var o = obj.TAB_HELPER_OPTIONS;
+                o ? (so.options = JSON.parse(o), so.options.tabs || (so.options.tabs = []), so.options.positions || (so.options.positions = []), G()) : (so.options = { tabs: [], positions: [] }, H()), (!so.options.templates || so.options.templates.length <= 0) && (so.options.templates = Q())
+            } catch (e) {
+                (console.error || console.log).call(console, e.stack || e)
+            } return so.showsHelp || 0 !== so.options.tabs.length || (so.showsHelp = !0), so.options
+        })
     }
 
     function D() { v(), y() }
@@ -202,15 +207,19 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
     function F() { return console.log(m()), { active: !0, remember: !0, code: "custom", name: "DongDuong", url: "https://his.lapolo.com:7000/his/screen-saver", monitor: m(), defaultMonitor: Eo.MAIN_MONITOR, fullScreen: !0, popup: !0, position: mo.FULLSIZE } }
 
     function W() {
- 
-        var o = localStorage[co];
-        o && (so.templateUrl = o), so.showImportTemplateDialog = !0
+        // var o = localStorage.getItem(co);
+      chrome.storage.local.get("TAB_HELPER_TEMPLATE_URL", function (obj) {
+            var o = obj.TAB_HELPER_TEMPLATE_URL;
+      
+        o && (so.templateUrl = JSON.parse(o)), so.showImportTemplateDialog = !0
+    })
     }
 
     function C(o) {
-        try { 
+        try {
             console.log('Value is set to ' + co + o);
-            so.showImportTemplateDialog = !1, o && "" !== o && (chrome.storage.local.set({co: o}), so.templateUrl = o, Y(o, function (o) { o.success && o.data && (o.data.tabs && x(so.options.tabs, o.data.tabs), o.data.templates && (so.replaceAllTemplates ? so.options.templates = o.data.templates : X(so.options.templates, o.data.templates)), y(!0), H()) })) } catch (e) {
+            so.showImportTemplateDialog = !1, o && "" !== o && (chrome.storage.local.set({ "TAB_HELPER_TEMPLATE_URL": JSON.stringify(o) }), so.templateUrl = o, Y(o, function (o) { o.success && o.data && (o.data.tabs && x(so.options.tabs, o.data.tabs), o.data.templates && (so.replaceAllTemplates ? so.options.templates = o.data.templates : X(so.options.templates, o.data.templates)), y(!0), H()) }))
+        } catch (e) {
             (console.error || console.log).call(console, e.stack || e)
         }
     }

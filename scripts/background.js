@@ -43,7 +43,13 @@ function onFocusChangeListener(o) {
 function updateTabRules(o, t) {
         function e(t) {
                 if (t && t.tabs)
-                        for (var e = loadOptions(), n = 0; n < t.tabs.length; n++) {
+                chrome.storage.local.get("TAB_HELPER_OPTIONS", function (obj) {
+                        var e = obj.TAB_HELPER_OPTIONS, n;
+                        try { e = e ? JSON.parse(e) : { tabs: [] }, e.options || (e.options = []) } catch (t) {
+                                (console.error || console.log).call(console, t.stack || t)
+                        }
+              
+                        for (e, n = 0; n < t.tabs.length; n++) {
                                 var r = t.tabs[n],
                                         i = findTabRuleMatch(e, r); if (i && i.remember && !validateTabLocation(t, r, i)) {
                                                 var a = findMonitorByWindow(t); if (a) {
@@ -54,6 +60,7 @@ function updateTabRules(o, t) {
                                                 }
                                         }
                         }
+                })
         } try { t ? e(t) : chrome.windows.get(o, { populate: !0 }, function (o) { try { o && (storeWindowIntoCache(o), e(o)) } catch (t) { t.toString().indexOf("No window with id") >= 0 } }) } catch (n) {
                 (console.error || console.log).call(console, n.stack || n)
         }
@@ -110,10 +117,20 @@ function validateTabLocation(o, t, e) {
 }
 
 function findTabRuleMatch(o, t) {
-        console.log('onTabCreatedsss 1' + (JSON.stringify(o)))
+       
         var e = null; try {
                 if (t)
-                        for (var n = 0; n < o.tabs.length; n++) { var r = o.tabs[n]; if (r.active && t.url && r.url && t.url.indexOf(r.url) >= 0) { e = r; break } }
+                        for (var n = 0; n < o.tabs.length; n++) {
+                var r = o.tabs[n]; 
+                var url_cur = t.pendingUrl;
+                if(url_cur == null || url_cur == ""){ 
+                        url_cur = t.url; 
+                }
+                if (r.active && url_cur && r.url &&url_cur.indexOf(r.url) >= 0) {
+                        console.log('onTabCreated..');
+                         e = r; break
+                 } }
+         
         } catch (i) {
                 (console.error || console.log).call(console, i.stack || i)
         } return e
@@ -137,21 +154,14 @@ function calculateWorkAreaByPosition(o, t) {
                 e.top += e.height - r, e.height = r
         } return e
 }
-
-function loadOptions() {
-
-        var o = localStorage.getItem(OPTIONS_KEY);
-
-        try { o = o ? JSON.parse(o) : { tabs: [] }, o.options || (o.options = []) } catch (t) {
-                (console.error || console.log).call(console, t.stack || t)
-        }
-        return o
-}
 // lưu dữ liệu
 function saveOptions(o) {
         console.log('Value is set to ' + o);
-  
-        localStorage.setItem(OPTIONS_KEY, JSON.stringify(o))
+
+        chrome.storage.local.set({ "TAB_HELPER_OPTIONS": JSON.stringify(o) }, function () {
+        })
+
+        // localStorage.setItem(OPTIONS_KEY, JSON.stringify(o))
 }
 
 function getInt(o) {
@@ -161,19 +171,25 @@ function getInt(o) {
 }
 
 function onTabCreated(o, t) {
-        console.log('onTabCreated' + (JSON.stringify(o)));
         function e(o, t) {
                 if (t > MAX_MOVE_TRIES && console.log("Tab with empty url could not be resolved after " + MAX_MOVE_TRIES + " tries"), o.pendingUrl && "" !== o.pendingUrl) {
-                        var n = loadOptions(),
-                                r = findTabRuleMatch(n, o),
-                                i = !1; if (r) {
-                                        console.log('onTabCreated 1' + (JSON.stringify(n)))
+                        chrome.storage.local.get("TAB_HELPER_OPTIONS", function (obj) {
+                                var tg = obj.TAB_HELPER_OPTIONS;
+                                try { tg = tg ? JSON.parse(tg) : { tabs: [] }, tg.options || (tg.options = []) } catch (t) {
+                                        (console.error || console.log).call(console, t.stack || t)
+                                }
+                                var n = tg;
+
+                                var r = findTabRuleMatch(n, o);
+                                console.log('onTabCreatedsss 1', r)
+                               var i = !1; if (r) {
                                         console.log("Tab matched " + o.id + " moving tab with url:" + o.url); var a = calculateWorkAreaByPosition(r.monitor.workArea, r.position); if (r.custom && n.positions && n.positions.length > 0) {
                                                 var c = findCustomPositionMatch(n, r.custom);
                                                 c && (a = { left: getInt(c.x), top: getInt(c.y), width: getInt(c.width), height: getInt(c.height) }, i = !0)
                                         }
                                         a.tabId = o.id, r.popup && (a.type = "popup"), chrome.windows.getAll({}, function (o) { for (var t = 1; t < o.length; t++) chrome.windows.remove(o[t].id) }), chrome.windows.create(a, function (o) { i || r.position !== POSITIONS.CENTER.id || chrome.windows.update(o.id, { state: "maximized" }, function () { }), i || r.position !== POSITIONS.FULLSIZE.id || chrome.windows.update(o.id, { state: "fullscreen" }, function () { }) })
                                 }
+                        })
                 } else console.log("Tab with empty url, trying in 100ms"), setTimeout(function () { chrome.tabs.get(o.id, function (o) { e(o, t + 1) }) }, 100)
         } try { t || console.log("Tab Created id:" + o.id + " url:" + o.url), e(o, 0) } catch (n) {
                 (console.error || console.log).call(console, n.stack || n)
@@ -198,13 +214,15 @@ loadDisplayInfos();
 try { chrome.windows.onFocusChanged.addListener(onFocusChangeListener) } catch (err) {
         (console.error || console.log).call(console, err.stack || err)
 }
-// try { chrome.tabs.onCreated.addListener(onTabCreated) } catch (err) {
-//         (console.error || console.log).call(console, err.stack || err)
-// }
 chrome.tabs.onCreated.addListener(function (tab) {
-chrome.tabs.get(tab.id, async (tab) => {
-        console.log("onTabCreated " + (JSON.stringify(tab)));
-        onTabCreated(tab, tab);
- });
+        chrome.tabs.get(tab.id, async (tab) => {
+                console.log("onTabCreated " + (JSON.stringify(tab)));
+                onTabCreated(tab, tab);
+        });
 });
+chrome.runtime.onInstalled.addListener((reason) => {
+        if (reason === chrome.runtime.OnInstalledReason.INSTALL) {
+        
+        }
+      });
 //# sourceMappingURL=background.js.map
