@@ -1,1 +1,538 @@
-<!doctype html><html class="tab-helper-options" ng-app="multiWindowPositioner" ng-controller="PositionerOptionsController" ng-class="{'wider':showExtraOptions}"><head><meta charset="utf-8"><style type="text/css">@-webkit-keyframes uil-default-anim { 0% { opacity: 1} 100% {opacity: 0} }@keyframes uil-default-anim { 0% { opacity: 1} 100% {opacity: 0} }.uil-default-css > div:nth-of-type(1){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: -0.5s;animation-delay: -0.5s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(2){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: -0.4166666666666667s;animation-delay: -0.4166666666666667s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(3){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: -0.33333333333333337s;animation-delay: -0.33333333333333337s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(4){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: -0.25s;animation-delay: -0.25s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(5){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: -0.16666666666666669s;animation-delay: -0.16666666666666669s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(6){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: -0.08333333333333331s;animation-delay: -0.08333333333333331s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(7){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: 0s;animation-delay: 0s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(8){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: 0.08333333333333337s;animation-delay: 0.08333333333333337s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(9){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: 0.16666666666666663s;animation-delay: 0.16666666666666663s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(10){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: 0.25s;animation-delay: 0.25s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(11){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: 0.33333333333333337s;animation-delay: 0.33333333333333337s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}.uil-default-css > div:nth-of-type(12){-webkit-animation: uil-default-anim 1s linear infinite;animation: uil-default-anim 1s linear infinite;-webkit-animation-delay: 0.41666666666666663s;animation-delay: 0.41666666666666663s;}.uil-default-css { position: relative;background:none;width:200px;height:200px;}</style><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><link rel="stylesheet" href="styles/options-vendor.css"><link rel="stylesheet" href="styles/main.css"></head><body id="top-section"><div class="uil-default-css centered wait-in-show" ng-class="{'wait-in-show-done': locale && locale.OPTIONS_TITLE && locale.OPTIONS_TITLE.length > 0}"><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute"></div></div><div class="wait-in-hidden" ng-class="{'wait-in-hidden-done': locale && locale.OPTIONS_TITLE && locale.OPTIONS_TITLE.length > 0}"><h1>&nbsp;-&nbsp; <a target="_blank" href="" style="color: inherit;align-content: center">{{::locale.OPTIONS_TITLE}}</a> <span ng-if="dirty" style="color:orangered">[{{::locale.DRAFT}}]</span></h1><hr><div class="row"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="panel panel-default"><div class="panel-heading">{{::locale.TAB_SETTINGS}}<label class="btn btn-default" type="button" ng-disabled="showNewTabOption || showEditTabOption" title="{{::locale.ADD_TAB_OPTION}}" ng-click="saveTabOption1();"><i>ADD</i></label></div><table class="table"><thead><tr><th>{{::locale.ACTIVE}}</th><th>{{::locale.NAME}}</th><th ng-if="showExtraOptions">{{::locale.URL}}</th><th>{{::locale.REMEMBER}}</th><th ng-if="showExtraOptions || (options.positions && options.positions.length > 0)">{{::locale.CUSTOM}}</th><th>{{::locale.MONITOR}}</th><th ng-if="showExtraOptions">{{::locale.DEFAULT_MONITOR}}</th><th>{{::locale.POSITION}}</th><th ng-if="showExtraOptions">{{::locale.PLAIN}}</th><th></th></tr></thead><tbody><tr class="hoverable-section options-rule-row" ng-repeat="tabOption in options.tabs track by tabOption.url"><td class="checkbox-cell"><span ng-style="styleicon" ng-if="tabOption.active" class="glyphicon glyphicon-ok hide-when-hover fix-checkbox-mark"></span><checkbox class="fix-checkbox show-when-hover" ng-model="tabOption.active" ng-change="markAsDirty()"></checkbox></td><td>{{tabOption.name}}</td><td ng-if="showExtraOptions">{{tabOption.url}}</td><td class="checkbox-cell"><span ng-style="styleicon" ng-if="tabOption.remember" class="glyphicon glyphicon-ok hide-when-hover fix-checkbox-mark"></span><checkbox class="fix-checkbox show-when-hover" ng-model="tabOption.remember" ng-change="markAsDirty()"></checkbox></td><td ng-class="{'missing-custom':tabOption.inconsistentCustom}" ng-if="showExtraOptions  || (options.positions && options.positions.length > 0)"><span class="hide-when-hover custom-select">{{tabOption.custom}}</span><select class="form-control show-when-hover custom-select" ng-model="tabOption.custom" ng-change="markAsDirty()"><option value="">select custom</option><option ng-repeat="position in options.positions" value="{{position.name}}">{{position.name}}</option></select></td><td ng-class="{'missing-monitor':tabOption.inconsistentMonitor}"><span class="hide-when-hover monitor-select">{{tabOption.monitor.idx}} {{tabOption.monitor.name}}</span><select class="form-control show-when-hover monitor-select" ng-options="(option.idx + ' ' + option.name) for option in MONITORS track by option.id" ng-change="markAsDirty()" ng-model="tabOption.monitor"></select></td><td ng-if="showExtraOptions">{{localizeDefaultMonitor(tabOption.defaultMonitor)}}</td><td><span class="hide-when-hover position-select">{{localizePosition(tabOption.position)}}</span><select class="form-control show-when-hover position-select" ng-model="tabOption.position" ng-change="markAsDirty()"><option ng-repeat="option in POSITIONS" value="{{option.id}}">{{option.name}}</option></select></td><td ng-if="showExtraOptions"><span ng-if="tabOption.popup"><i class="fa fa-check"></i></span></td><td class="tab-action-bar"><span class="btn btn-default" title="{{::locale.EDIT_TAB_RULE}}" ng-click="editTabOption(tabOption)"><i>EDIT</i> </span><span class="btn btn-default" title="{{::locale.DELETE_TAB_RULE}}" ng-click="deleteTabOption(tabOption)"><i>REMOVE</i> </span><span class="btn btn-default" ng-class="{'hidden-only': $first}" title="{{::locale.MOVE_UP}}" ng-click="moveOptionUp($first, $index)"><i class="fa fa-arrow-up"></i> </span><span class="btn btn-default" ng-class="{'hidden-only': $last}" title="{{::locale.MOVE_DOWN}}" ng-click="moveOptionDown($last, $index)"><i class="fa fa-arrow-down"></i></span></td></tr></tbody></table></div></div></div><div class="row" ng-if="showExtraOptions"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="panel panel-default"><div class="panel-heading">{{::locale.TAB_POSITIONS}}<label class="btn btn-default" type="button" title="{{::locale.ADD_POSITION}}" ng-click="addPosition();"><i class="fa fa-plus"></i></label></div><table class="table"><thead><tr><th>{{::locale.NAME}}</th><th>X</th><th>Y</th><th>{{::locale.WIDTH}}</th><th>{{::locale.HEIGHT}}</th><th></th></tr></thead><tbody><tr class="hoverable-section options-position-row" ng-repeat="position in options.positions track by position.name"><td><input type="text" class="form-control" ng-change="markAsDirty()" ng-model="position.name"></td><td><input type="number" class="form-control" ng-change="markAsDirty()" min="1" step="1" ng-model="position.x"></td><td><input type="number" class="form-control" ng-change="markAsDirty()" min="1" step="1" ng-model="position.y"></td><td><input type="number" class="form-control" ng-change="markAsDirty()" min="1" step="1" ng-model="position.width"></td><td><input type="number" class="form-control" min="1" step="1" ng-change="markAsDirty()" ng-model="position.height"></td><td class="tab-action-bar"><span class="btn btn-default" title="{{::locale.REMOVE_POSITION}}" ng-click="deletePositionOption(position)"><i class="fa fa-remove"></i> </span><span class="btn btn-default" ng-repeat="monitor in MONITORS" ng-click="setCustomPositionAsMonitor(position, monitor);">{{monitor.idx}}</span></td></tr></tbody></table></div></div></div><div class="row" ng-if="showNewTabOption || showEditTabOption"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rule-dialog"><div class="panel" ng-class="{'panel-primary':showNewTabOption, 'panel-default': showEditTabOption}"><div class="panel-heading"><span ng-if="showNewTabOption">{{::locale.NEW_TAB_OPTION_TITLE}}</span> <span ng-if="showEditTabOption">{{::locale.EDIT_TAB_OPTION_TITLE}}</span></div><div class="panel-body"><div class="row"><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="form-group"><label for="inputTemplate" focus-on-for="focus-inputTemplate" class="col-md-4 col-lg-4">{{::locale.TEMPLATE}}</label><div class="col-md-8 col-lg-8"><select name="mySelect" id="inputTemplate" focus-on="focus-inputTemplate" class="form-control" ng-options="option.name for option in options.templates track by option.url" ng-model="newTabOption.template" ng-change="useTemplateAsOption()"></select></div></div></div><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><hr></div><div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="form-group"><label for="inputActive" focus-on-for="focus-inputActive" class="col-md-4 col-lg-4">{{::locale.ACTIVE}}</label><div class="col-lg-8"><checkbox id="inputActive" class="fix-checkbox" ng-model="newTabOption.active"></checkbox></div></div><div class="clearfix"></div><div class="form-group margin-top-md"><label for="inputRemember" focus-on-for="focus-inputRemember" class="col-md-4 col-lg-4">{{::locale.REMEMBER}}</label><div class="col-lg-8"><checkbox id="inputRemember" class="fix-checkbox" ng-model="newTabOption.remember"></checkbox></div></div><div class="clearfix"></div><div class="form-group margin-top-md"><label for="inputName" focus-on-for="focus-inputUrl" class="col-md-4 col-lg-4">{{::locale.NAME}}</label><div class="col-md-8 col-lg-8"><input id="inputName" type="text" focus-on="focus-inputName" class="form-control" ng-model="newTabOption.name"></div></div><div class="form-group margin-top-md"><label for="inputUrl" focus-on-for="focus-inputUrl" class="col-md-4 col-lg-4">{{::locale.URL}}</label><div class="col-md-8 col-lg-8"><input id="inputUrl" type="text" focus-on="focus-inputUrl" class="form-control" ng-model="newTabOption.url"></div></div><div class="form-group margin-top-md"><label for="inputMonitor" focus-on-for="focus-inputMonitor" class="col-md-4 col-lg-4">{{::locale.MONITOR}}</label><div class="col-md-8 col-lg-8"><select name="mySelect" id="inputMonitor" focus-on="focus-inputMonitor" class="form-control" ng-options="option.name for option in MONITORS track by option.id" ng-model="newTabOption.monitor"></select></div></div><div class="form-group margin-top-md"><label for="inputDefaultMonitor" focus-on-for="focus-inputDefaultMonitor" class="col-md-4 col-lg-4">{{::locale.DEFAULT_MONITOR}}</label><div class="col-md-8 col-lg-8"><select name="mySelect" id="inputDefaultMonitor" focus-on="focus-inputDefaultMonitor" class="form-control" ng-options="option.name for option in DEFAULT_MONITORS track by option.id" ng-model="newTabOption.defaultMonitor"></select></div></div><div class="form-group margin-top-md"><label for="inputPosition" focus-on-for="focus-inputPosition" class="col-md-4 col-lg-4">{{::locale.POSITION}}</label><div class="col-md-8 col-lg-8"><select name="mySelect" id="inputPosition" focus-on="focus-inputPosition" class="form-control" ng-options="option.name for option in POSITIONS track by option.id" ng-model="newTabOption.position"></select></div></div><div class="form-group margin-top-md"><label for="inputPopup" focus-on-for="focus-inputPopup" class="col-md-4 col-lg-4">{{::locale.PLAIN_WINDOW}}</label><div class="col-md-8 col-lg-8"><checkbox id="inputPopup" class="fix-checkbox" ng-model="newTabOption.popup"></checkbox></div></div></div></div><hr><span class="btn btn-primary" ng-if="showNewTabOption" type="button" ng-click="saveTabOption();">{{::locale.ADD}} </span><span class="btn btn-primary" ng-if="showEditTabOption" type="button" ng-click="updateTabOption();">{{::locale.UPDATE}} </span><span class="btn btn-default" type="button" ng-click="cancelTabOption();">{{::locale.CANCEL}}</span></div></div></div></div><div ng-if="showImportTemplateDialog"><hr><div class="row"><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div><div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 rule-dialog"><div class="panel default panel-default"><div class="panel-heading">{{::locale.IMPORT_TEMPLATE}}</div><div class="panel-body"><div class="row"><div class="form-group"><label for="inputTemplateUrl" focus-on-for="focus-inputTemplateUrl" class="col-md-2 col-lg-2">{{::locale.IMPORT_TEMPLATE}}</label><div class="col-md-10 col-lg-10"><input id="inputTemplateUrl" type="text" focus-on="focus-inputTemplateUrl" class="form-control" ng-model="templateUrl"></div></div><div class="form-group"><label for="inputReplaceAllTemplates" focus-on-for="focus-inputReplaceAllTemplates" class="col-md-2 col-lg-2 margin-top-md">{{::locale.REPLACE_ALL_TEMPLATES}}</label><div class="col-md-10 col-lg-10 margin-top-md"><checkbox id="inputReplaceAllTemplates" class="fix-checkbox" ng-model="replaceAllTemplates"></checkbox></div></div></div></div><hr><div class="btn-group margin-md"><span class="btn btn-default" ng-class="{'btn-primary': templateUrl && templateUrl !== ''}" ng-disabled="!templateUrl || templateUrl === ''" type="button" ng-click="acceptImportTemplateMenu(templateUrl);">{{::locale.ADD}} </span><span class="btn btn-default" type="button" ng-click="cancelImportTemplateMenu();">{{::locale.CANCEL}}</span></div></div></div><div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div></div></div><hr><div class="btn-group"><label class="btn btn-default" type="button" ng-disabled="showNewTabOption || showEditTabOption" title="{{::locale.ADD_TAB_OPTION}}" ng-click="addTabOption();"><i>ADD</i></label><label class="btn btn-default" type="button" title="{{::locale.IMPORT_TEMPLATE}}" ng-click="openImportTemplateMenu();"><i>DOWLOAD</i></label><label class="btn btn-default" type="button" ng-if="showExtraOptions" title="{{::locale.EXPORT_TEMPLATE}}" ng-click="exportTemplate();"><i>UPDATE</i></label></div><div class="btn-group margin-left-lg"><label class="btn btn-default" type="button" ng-class="{'btn-primary':dirty}" title="{{::locale.SAVE}}" ng-click="saveOptions();"><i></i>SAVE</label><label class="btn btn-default" type="button" title="{{::locale.RELOAD}}" ng-click="reloadOptions();"><i>RELOAD</i></label><label class="btn btn-default" type="button" ng-if="dirty" ng-class="{'btn-primary':dirty}" title="{{::locale.UNDO}}" ng-click="undoOptions();"><i>UNDO</i></label></div><div class="btn-group pull-right"><label class="btn btn-default" type="button" title="{{::locale.DETECT_MONITORS}}" ng-click="detectMonitors();"><i src="">SHOW</i></label><div class="btn-group dropup"><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span> <span class="sr-only">Toggle Dropdown</span></button><ul class="dropdown-menu"><li role="separator" clss="divider"></li><li class="dropdown-header">{{::locale.MONITOR}}</li><li role="menuitem" ng-repeat="option in MONITORS"><a ng-click="applyMonitorToAll(option.id)" href="#">{{option.idx}} {{option.name}}</a></li><li role="separator" class="divider"></li><li class="dropdown-header">{{::locale.POSITION}}</li><li role="menuitem" ng-repeat="option in POSITIONS"><a ng-click="applyPositionToAll(option.id)" href="#">{{option.name}}</a></li></ul></div><label class="btn btn-warning" type="button" ng-if="inconsistentOptions" title="{{::locale.AUTO_REPAIR_RULES}}" ng-click="autofixOptions();"><i class="fa fa-wrench"></i></label></div><hr></div><script src="scripts/options-vendor.js"></script><script src="scripts/options.js"></script></body></html>
+<!doctype html>
+<html class="tab-helper-options" ng-app="multiWindowPositioner" ng-controller="PositionerOptionsController"
+    ng-class="{'wider':showExtraOptions}">
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        @-webkit-keyframes uil-default-anim {
+            0% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        @keyframes uil-default-anim {
+            0% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        .uil-default-css>div:nth-of-type(1) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(2) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: -0.4166666666666667s;
+            animation-delay: -0.4166666666666667s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(3) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: -0.33333333333333337s;
+            animation-delay: -0.33333333333333337s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(4) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: -0.25s;
+            animation-delay: -0.25s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(5) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: -0.16666666666666669s;
+            animation-delay: -0.16666666666666669s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(6) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: -0.08333333333333331s;
+            animation-delay: -0.08333333333333331s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(7) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(8) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: 0.08333333333333337s;
+            animation-delay: 0.08333333333333337s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(9) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: 0.16666666666666663s;
+            animation-delay: 0.16666666666666663s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(10) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(11) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: 0.33333333333333337s;
+            animation-delay: 0.33333333333333337s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+
+        .uil-default-css>div:nth-of-type(12) {
+            -webkit-animation: uil-default-anim 1s linear infinite;
+            animation: uil-default-anim 1s linear infinite;
+            -webkit-animation-delay: 0.41666666666666663s;
+            animation-delay: 0.41666666666666663s;
+        }
+
+        .uil-default-css {
+            position: relative;
+            background: none;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/options-vendor.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body id="top-section">
+    <div class="uil-default-css centered wait-in-show"
+        ng-class="{'wait-in-show-done': locale && locale.OPTIONS_TITLE && locale.OPTIONS_TITLE.length > 0}">
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+        <div
+            style="top:80px;left:93px;width:14px;height:40px;background:#232b2e;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute">
+        </div>
+    </div>
+    <div class="wait-in-hidden"
+        ng-class="{'wait-in-hidden-done': locale && locale.OPTIONS_TITLE && locale.OPTIONS_TITLE.length > 0}">
+        <h1>&nbsp;-&nbsp; <a target="_blank" href=""
+                style="color: inherit;align-content: center">{{::locale.OPTIONS_TITLE}}</a> <span ng-if="dirty"
+                style="color:orangered">[{{::locale.DRAFT}}]</span></h1>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{::locale.TAB_SETTINGS}}<label class="btn btn-default" type="button"
+                            ng-disabled="showNewTabOption || showEditTabOption" title="{{::locale.ADD_TAB_OPTION}}"
+                            ng-click="saveTabOption1();"><i>ADD</i></label></div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>{{::locale.ACTIVE}}</th>
+                                <th>{{::locale.NAME}}</th>
+                                <th ng-if="showExtraOptions">{{::locale.URL}}</th>
+                                <th>{{::locale.REMEMBER}}</th>
+                                <th ng-if="showExtraOptions || (options.positions && options.positions.length > 0)">
+                                    {{::locale.CUSTOM}}</th>
+                                <th>{{::locale.MONITOR}}</th>
+                                <th ng-if="showExtraOptions">{{::locale.DEFAULT_MONITOR}}</th>
+                                <th>{{::locale.POSITION}}</th>
+                                <th ng-if="showExtraOptions">{{::locale.PLAIN}}</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hoverable-section options-rule-row"
+                                ng-repeat="tabOption in options.tabs track by tabOption.url">
+                                <td class="checkbox-cell"><span ng-style="styleicon" ng-if="tabOption.active"
+                                        class="glyphicon glyphicon-ok hide-when-hover fix-checkbox-mark"></span>
+                                    <checkbox class="fix-checkbox show-when-hover" ng-model="tabOption.active"
+                                        ng-change="markAsDirty()"></checkbox>
+                                </td>
+                                <td>{{tabOption.name}}</td>
+                                <td ng-if="showExtraOptions">{{tabOption.url}}</td>
+                                <td class="checkbox-cell"><span ng-style="styleicon" ng-if="tabOption.remember"
+                                        class="glyphicon glyphicon-ok hide-when-hover fix-checkbox-mark"></span>
+                                    <checkbox class="fix-checkbox show-when-hover" ng-model="tabOption.remember"
+                                        ng-change="markAsDirty()"></checkbox>
+                                </td>
+                                <td ng-class="{'missing-custom':tabOption.inconsistentCustom}"
+                                    ng-if="showExtraOptions  || (options.positions && options.positions.length > 0)">
+                                    <span class="hide-when-hover custom-select">{{tabOption.custom}}</span><select
+                                        class="form-control show-when-hover custom-select" ng-model="tabOption.custom"
+                                        ng-change="markAsDirty()">
+                                        <option value="">select custom</option>
+                                        <option ng-repeat="position in options.positions" value="{{position.name}}">
+                                            {{position.name}}</option>
+                                    </select></td>
+                                <td ng-class="{'missing-monitor':tabOption.inconsistentMonitor}"><span
+                                        class="hide-when-hover monitor-select">{{tabOption.monitor.idx}}
+                                        {{tabOption.monitor.name}}</span><select
+                                        class="form-control show-when-hover monitor-select"
+                                        ng-options="(option.idx + ' ' + option.name) for option in MONITORS track by option.id"
+                                        ng-change="markAsDirty()" ng-model="tabOption.monitor"></select></td>
+                                <td ng-if="showExtraOptions">{{localizeDefaultMonitor(tabOption.defaultMonitor)}}</td>
+                                <td><span
+                                        class="hide-when-hover position-select">{{localizePosition(tabOption.position)}}</span><select
+                                        class="form-control show-when-hover position-select"
+                                        ng-model="tabOption.position" ng-change="markAsDirty()">
+                                        <option ng-repeat="option in POSITIONS" value="{{option.id}}">{{option.name}}
+                                        </option>
+                                    </select></td>
+                                <td ng-if="showExtraOptions"><span ng-if="tabOption.popup"><i
+                                            class="fa fa-check"></i></span></td>
+                                <td class="tab-action-bar"><span class="btn btn-default"
+                                        title="{{::locale.EDIT_TAB_RULE}}"
+                                        ng-click="editTabOption(tabOption)"><i>EDIT</i> </span><span
+                                        class="btn btn-default" title="{{::locale.DELETE_TAB_RULE}}"
+                                        ng-click="deleteTabOption(tabOption)"><i>REMOVE</i> </span><span
+                                        class="btn btn-default" ng-class="{'hidden-only': $first}"
+                                        title="{{::locale.MOVE_UP}}" ng-click="moveOptionUp($first, $index)"><i
+                                            class="fa fa-arrow-up"></i> </span><span class="btn btn-default"
+                                        ng-class="{'hidden-only': $last}" title="{{::locale.MOVE_DOWN}}"
+                                        ng-click="moveOptionDown($last, $index)"><i class="fa fa-arrow-down"></i></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-if="showExtraOptions">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{::locale.TAB_POSITIONS}}<label class="btn btn-default" type="button"
+                            title="{{::locale.ADD_POSITION}}" ng-click="addPosition();"><i
+                                class="fa fa-plus"></i></label></div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>{{::locale.NAME}}</th>
+                                <th>X</th>
+                                <th>Y</th>
+                                <th>{{::locale.WIDTH}}</th>
+                                <th>{{::locale.HEIGHT}}</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hoverable-section options-position-row"
+                                ng-repeat="position in options.positions track by position.name">
+                                <td><input type="text" class="form-control" ng-change="markAsDirty()"
+                                        ng-model="position.name"></td>
+                                <td><input type="number" class="form-control" ng-change="markAsDirty()" min="1" step="1"
+                                        ng-model="position.x"></td>
+                                <td><input type="number" class="form-control" ng-change="markAsDirty()" min="1" step="1"
+                                        ng-model="position.y"></td>
+                                <td><input type="number" class="form-control" ng-change="markAsDirty()" min="1" step="1"
+                                        ng-model="position.width"></td>
+                                <td><input type="number" class="form-control" min="1" step="1" ng-change="markAsDirty()"
+                                        ng-model="position.height"></td>
+                                <td class="tab-action-bar"><span class="btn btn-default"
+                                        title="{{::locale.REMOVE_POSITION}}"
+                                        ng-click="deletePositionOption(position)"><i class="fa fa-remove"></i>
+                                    </span><span class="btn btn-default" ng-repeat="monitor in MONITORS"
+                                        ng-click="setCustomPositionAsMonitor(position, monitor);">{{monitor.idx}}</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-if="showNewTabOption || showEditTabOption">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rule-dialog">
+                <div class="panel" ng-class="{'panel-primary':showNewTabOption, 'panel-default': showEditTabOption}">
+                    <div class="panel-heading"><span ng-if="showNewTabOption">{{::locale.NEW_TAB_OPTION_TITLE}}</span>
+                        <span ng-if="showEditTabOption">{{::locale.EDIT_TAB_OPTION_TITLE}}</span></div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group"><label for="inputTemplate" focus-on-for="focus-inputTemplate"
+                                        class="col-md-4 col-lg-4">{{::locale.TEMPLATE}}</label>
+                                    <div class="col-md-8 col-lg-8"><select name="mySelect" id="inputTemplate"
+                                            focus-on="focus-inputTemplate" class="form-control"
+                                            ng-options="option.name for option in options.templates track by option.url"
+                                            ng-model="newTabOption.template" ng-change="useTemplateAsOption()"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <hr>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group"><label for="inputActive" focus-on-for="focus-inputActive"
+                                        class="col-md-4 col-lg-4">{{::locale.ACTIVE}}</label>
+                                    <div class="col-lg-8">
+                                        <checkbox id="inputActive" class="fix-checkbox" ng-model="newTabOption.active">
+                                        </checkbox>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="form-group margin-top-md"><label for="inputRemember"
+                                        focus-on-for="focus-inputRemember"
+                                        class="col-md-4 col-lg-4">{{::locale.REMEMBER}}</label>
+                                    <div class="col-lg-8">
+                                        <checkbox id="inputRemember" class="fix-checkbox"
+                                            ng-model="newTabOption.remember"></checkbox>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="form-group margin-top-md"><label for="inputName"
+                                        focus-on-for="focus-inputUrl"
+                                        class="col-md-4 col-lg-4">{{::locale.NAME}}</label>
+                                    <div class="col-md-8 col-lg-8"><input id="inputName" type="text"
+                                            focus-on="focus-inputName" class="form-control"
+                                            ng-model="newTabOption.name"></div>
+                                </div>
+                                <div class="form-group margin-top-md"><label for="inputUrl"
+                                        focus-on-for="focus-inputUrl" class="col-md-4 col-lg-4">{{::locale.URL}}</label>
+                                    <div class="col-md-8 col-lg-8"><input id="inputUrl" type="text"
+                                            focus-on="focus-inputUrl" class="form-control" ng-model="newTabOption.url">
+                                    </div>
+                                </div>
+                                <div class="form-group margin-top-md"><label for="inputMonitor"
+                                        focus-on-for="focus-inputMonitor"
+                                        class="col-md-4 col-lg-4">{{::locale.MONITOR}}</label>
+                                    <div class="col-md-8 col-lg-8"><select name="mySelect" id="inputMonitor"
+                                            focus-on="focus-inputMonitor" class="form-control"
+                                            ng-options="option.name for option in MONITORS track by option.id"
+                                            ng-model="newTabOption.monitor"></select></div>
+                                </div>
+                                <div class="form-group margin-top-md"><label for="inputDefaultMonitor"
+                                        focus-on-for="focus-inputDefaultMonitor"
+                                        class="col-md-4 col-lg-4">{{::locale.DEFAULT_MONITOR}}</label>
+                                    <div class="col-md-8 col-lg-8"><select name="mySelect" id="inputDefaultMonitor"
+                                            focus-on="focus-inputDefaultMonitor" class="form-control"
+                                            ng-options="option.name for option in DEFAULT_MONITORS track by option.id"
+                                            ng-model="newTabOption.defaultMonitor"></select></div>
+                                </div>
+                                <div class="form-group margin-top-md"><label for="inputPosition"
+                                        focus-on-for="focus-inputPosition"
+                                        class="col-md-4 col-lg-4">{{::locale.POSITION}}</label>
+                                    <div class="col-md-8 col-lg-8"><select name="mySelect" id="inputPosition"
+                                            focus-on="focus-inputPosition" class="form-control"
+                                            ng-options="option.name for option in POSITIONS track by option.id"
+                                            ng-model="newTabOption.position"></select></div>
+                                </div>
+                                <div class="form-group margin-top-md"><label for="inputPopup"
+                                        focus-on-for="focus-inputPopup"
+                                        class="col-md-4 col-lg-4">{{::locale.PLAIN_WINDOW}}</label>
+                                    <div class="col-md-8 col-lg-8">
+                                        <checkbox id="inputPopup" class="fix-checkbox" ng-model="newTabOption.popup">
+                                        </checkbox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr><span class="btn btn-primary" ng-if="showNewTabOption" type="button"
+                            ng-click="saveTabOption();">{{::locale.ADD}} </span><span class="btn btn-primary"
+                            ng-if="showEditTabOption" type="button" ng-click="updateTabOption();">{{::locale.UPDATE}}
+                        </span><span class="btn btn-default" type="button"
+                            ng-click="cancelTabOption();">{{::locale.CANCEL}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="showImportTemplateDialog">
+            <hr>
+            <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 rule-dialog">
+                    <div class="panel default panel-default">
+                        <div class="panel-heading">{{::locale.IMPORT_TEMPLATE}}</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="form-group"><label for="inputTemplateUrl"
+                                        focus-on-for="focus-inputTemplateUrl"
+                                        class="col-md-2 col-lg-2">{{::locale.IMPORT_TEMPLATE}}</label>
+                                    <div class="col-md-10 col-lg-10"><input id="inputTemplateUrl" type="text"
+                                            focus-on="focus-inputTemplateUrl" class="form-control"
+                                            ng-model="templateUrl"></div>
+                                </div>
+                                <div class="form-group"><label for="inputReplaceAllTemplates"
+                                        focus-on-for="focus-inputReplaceAllTemplates"
+                                        class="col-md-2 col-lg-2 margin-top-md">{{::locale.REPLACE_ALL_TEMPLATES}}</label>
+                                    <div class="col-md-10 col-lg-10 margin-top-md">
+                                        <checkbox id="inputReplaceAllTemplates" class="fix-checkbox"
+                                            ng-model="replaceAllTemplates"></checkbox>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="btn-group margin-md"><span class="btn btn-default"
+                                ng-class="{'btn-primary': templateUrl && templateUrl !== ''}"
+                                ng-disabled="!templateUrl || templateUrl === ''" type="button"
+                                ng-click="acceptImportTemplateMenu(templateUrl);">{{::locale.ADD}} </span><span
+                                class="btn btn-default" type="button"
+                                ng-click="cancelImportTemplateMenu();">{{::locale.CANCEL}}</span></div>
+                    </div>
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="btn-group"><label class="btn btn-default" type="button"
+                ng-disabled="showNewTabOption || showEditTabOption" title="{{::locale.ADD_TAB_OPTION}}"
+                ng-click="addTabOption();"><i>ADD</i></label><label class="btn btn-default" type="button"
+                title="{{::locale.IMPORT_TEMPLATE}}" ng-click="openImportTemplateMenu();"><i>DOWLOAD</i></label><label
+                class="btn btn-default" type="button" ng-if="showExtraOptions" title="{{::locale.EXPORT_TEMPLATE}}"
+                ng-click="exportTemplate();"><i>UPDATE</i></label></div>
+        <div class="btn-group margin-left-lg"><label class="btn btn-default" type="button"
+                ng-class="{'btn-primary':dirty}" title="{{::locale.SAVE}}"
+                ng-click="saveOptions();"><i></i>SAVE</label><label class="btn btn-default" type="button"
+                title="{{::locale.RELOAD}}" ng-click="reloadOptions();"><i>RELOAD</i></label><label
+                class="btn btn-default" type="button" ng-if="dirty" ng-class="{'btn-primary':dirty}"
+                title="{{::locale.UNDO}}" ng-click="undoOptions();"><i>UNDO</i></label></div>
+        <div class="btn-group pull-right"><label class="btn btn-default" type="button"
+                title="{{::locale.DETECT_MONITORS}}" ng-click="detectMonitors();"><i src="">SHOW</i></label>
+            <div class="btn-group dropup"><button type="button" class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span> <span
+                        class="sr-only">Toggle Dropdown</span></button>
+                <ul class="dropdown-menu">
+                    <li role="separator" clss="divider"></li>
+                    <li class="dropdown-header">{{::locale.MONITOR}}</li>
+                    <li role="menuitem" ng-repeat="option in MONITORS"><a ng-click="applyMonitorToAll(option.id)"
+                            href="#">{{option.idx}} {{option.name}}</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">{{::locale.POSITION}}</li>
+                    <li role="menuitem" ng-repeat="option in POSITIONS"><a ng-click="applyPositionToAll(option.id)"
+                            href="#">{{option.name}}</a></li>
+                </ul>
+            </div><label class="btn btn-warning" type="button" ng-if="inconsistentOptions"
+                title="{{::locale.AUTO_REPAIR_RULES}}" ng-click="autofixOptions();"><i class="fa fa-wrench"></i></label>
+        </div>
+        <hr>
+    </div>
+    <script src="scripts/options-vendor.js"></script>
+    <script src="scripts/options.js"></script>
+</body>
+
+</html>
