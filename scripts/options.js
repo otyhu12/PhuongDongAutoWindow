@@ -39,6 +39,7 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
 
     function T() { so.showExtraOptions = !so.showExtraOptions }
 
+    // lấy ra màn hình
     function p() {
         chrome.system.display.getInfo(function (o) {
             try {
@@ -101,8 +102,26 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
         }
     }
 
+    // thêm nhanh theo cấu hình có sẵn
+
+    function AddAuto(){
+        chrome.system.display.getInfo(function (o) {
+            try {
+                so.displayInfos = angular.copy(o), console.table(o), _.forEach(so.displayInfos, function (o, e) {
+
+                    o.idx = e + 1; var n = { id: o.id, idx: o.idx, name: o.name, workArea: o.workArea };
+
+                    Oo[n.id] = n
+                }), e(function () { y() })
+            } catch (n) {
+                (console.error || console.log).call(console, n.stack || n)
+            }
+        })
+    }
     function b() {
-        so.newTabOption = F(), so.newTabOption.template = null; try { so.options.tabs.push({ active: so.newTabOption.active, code: so.newTabOption.code, remember: so.newTabOption.remember, url: so.newTabOption.url, name: so.newTabOption.name, monitor: so.newTabOption.monitor, fullScreen: so.newTabOption.fullScreen, popup: !0, position: so.newTabOption.position ? so.newTabOption.position.id : Oo.CENTER.id, defaultMonitor: so.newTabOption.defaultMonitor ? so.newTabOption.defaultMonitor.id : Eo.MAIN_MONITOR.id, timestamp: (new Date).toISOString() }), y(), H(), console.log(so.newTabOption.monitor) } catch (o) {
+        console.log("dhjagbshjdbhaw")
+      so.newTabOption = F(), so.newTabOption.template = null; try { 
+          so.options.tabs.push({ active: so.newTabOption.active, code: so.newTabOption.code, remember: so.newTabOption.remember, url: so.newTabOption.url, name: so.newTabOption.name, monitor: so.newTabOption.monitor, fullScreen: so.newTabOption.fullScreen, popup: !0, position: so.newTabOption.position ? so.newTabOption.position.id : Oo.CENTER.id, defaultMonitor: so.newTabOption.defaultMonitor ? so.newTabOption.defaultMonitor.id : Eo.MAIN_MONITOR.id, timestamp: (new Date).toISOString() }), y(), H(), console.log(so.newTabOption.monitor) } catch (o) {
             (console.error || console.log).call(console, o.stack || o)
         }
     }
@@ -204,7 +223,7 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
 
     function k() { return { active: !0, remember: !1, code: "custom", name: so.locale.RULE_NAME_PLACEHOLDER, url: "http://any.url/", monitor: m(), defaultMonitor: Eo.MAIN_MONITOR, fullScreen: !1, popup: !0, position: mo.CENTER } }
 
-    function F() { return console.log(m()), { active: !0, remember: !0, code: "custom", name: "DongDuong", url: "https://his.lapolo.com:7000/his/screen-saver", monitor: m(), defaultMonitor: Eo.MAIN_MONITOR, fullScreen: !0, popup: !0, position: mo.FULLSIZE } }
+    function F() { return console.log(m()), { active: !0, remember: !0, code: "custom", name: "PhuongDuong", url: "clinical-queue", monitor: m(), defaultMonitor: Eo.MAIN_MONITOR, fullScreen: !0, popup: !0, position: mo.FULLSIZE } }
 
     function W() {
         // var o = localStorage.getItem(co);
@@ -285,7 +304,7 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
         n(e, "multiwindow-positioner-rule-export.json")
     }
 
-    function Q() { return [{ active: !0, remember: !1, name: "PhuongDong", url: "https://his.lapolo.com:7000/his/screen-saver", code: "google-search", defaultMonitor: "main-monitor" }] }
+    function Q() { return [{ active: !0, remember: !1, name: "PhuongDong", url: "clinical-queuer", code: "google-search", defaultMonitor: "main-monitor" }] }
 
     function $(o, e) { o || (K(so.options.tabs, e, e - 1), H()) }
 
@@ -320,7 +339,6 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
     function io(o) { var e = o; return o === mo.CENTER.id ? e = so.locale.MAXIMIZED : o === mo.LEFT_HALF.id ? e = so.locale.LEFT_HALF : o === mo.RIGHT_HALF.id ? e = so.locale.RIGHT_HALF : o === mo.TOP_HALF.id ? e = so.locale.TOP_HALF : o === mo.BOTTOM_HALF.id && (e = so.locale.BOTTOM_HALF), e }
 
     function ao() { so.showsHelp = !so.showsHelp, ro(so.showsHelp ? "quick-info-section" : "top-section") }
-
     function ro(o, n, t, i) {
         var a = (angular.isDefined(t) ? t : 0, angular.isDefined(i) ? i : 0),
             r = jQuery("html, body");
@@ -332,7 +350,8 @@ angular.module("multiWindowPositioner", ["ngFileUpload", "ui.checkbox", "uuid4"]
         To = 1100,
         po = 3,
         Oo = {};
-    so.locale = no(); var mo = { FULLSIZE: { id: "fullsize", name: "Fullsize" }, CENTER: { id: "center", name: so.locale.MAXIMIZED }, LEFT_HALF: { id: "left-half", name: so.locale.LEFT_HALF }, RIGHT_HALF: { id: "right-half", name: so.locale.RIGHT_HALF }, TOP_HALF: { id: "top-half", name: so.locale.TOP_HALF }, BOTTOM_HALF: { id: "bottom-half", name: so.locale.BOTTOM_HALF } },
+    so.locale = no(); 
+    var mo = { FULLSIZE: { id: "fullsize", name: "Fullsize" }, CENTER: { id: "center", name: so.locale.MAXIMIZED }, LEFT_HALF: { id: "left-half", name: so.locale.LEFT_HALF }, RIGHT_HALF: { id: "right-half", name: so.locale.RIGHT_HALF }, TOP_HALF: { id: "top-half", name: so.locale.TOP_HALF }, BOTTOM_HALF: { id: "bottom-half", name: so.locale.BOTTOM_HALF } },
         Eo = { MAIN_MONITOR: { id: "main-monitor", name: so.locale.MAIN_MONITOR }, NOT_MAIN_MONITOR: { id: "not-main-monitor", name: so.locale.NOT_MAIN_MONITOR }, BIGGEST_RESOLUTION: { id: "biggest-area", name: so.locale.BIGGEST_RESOLUTION }, BIGGEST_HEIGHT: { id: "biggest-height", name: so.locale.BIGGEST_HEIGHT }, BIGGEST_WIDTH: { id: "biggest-width", name: so.locale.BIGGEST_WIDTH }, SMALLEST_RESOLUTION: { id: "smallest-area", name: so.locale.SMALLEST_RESOLUTION }, SMALLEST_HEIGHT: { id: "smallest-height", name: so.locale.SMALLEST_HEIGHT }, SMALLEST_WIDTH: { id: "smallest-width", name: so.locale.SMALLEST_WIDTH } };
     so.POSITIONS = mo, so.MONITORS = Oo, so.DEFAULT_MONITORS = Eo, so.windowHandlers = {}, so.options = null, so.showNewTabOption = !1, so.showEditTabOption = !1, so.showImportTemplateDialog = !1, so.inconsistentOptions = !1, so.dirty = !1, so.showExtraOptions = !1, so.showsHelp = !1, so.isopen = !0, so.showImportTemplateDialog = !1, so.templateUrl = "", so.replaceAllTemplates = !0, so.localizeDefaultMonitor = to, so.localizePosition = io, so.markAsDirty = H, so.saveOptions = R, so.loadOptions = v, so.undoOptions = v, so.reloadOptions = D, so.detectMonitors = O, so.showAdvancedOptions = T, so.addTabOption = I, so.saveTabOption = N, so.saveTabOption1 = b, so.updateTabOption = S, so.editTabOption = h, so.useTemplateAsOption = f, so.addPosition = M, so.setCustomPositionAsMonitor = g, so.applyPositionToAll = r, so.applyMonitorToAll = s, so.autofixOptions = B, so.validateOptions = y, so.moveOptionUp = $, so.moveOptionDown = q, so.importTemplate = j, so.openImportTemplateMenu = W, so.acceptImportTemplateMenu = C, so.cancelImportTemplateMenu = Z, so.exportTemplate = J, so.cancelTabOption = w, so.deleteTabOption = E, so.deletePositionOption = u, so.toggleHelp = ao, a()
 }]);
