@@ -122,9 +122,9 @@ function findTabRuleMatch(o, t) {
                 if (t)
                         for (var n = 0; n < o.tabs.length; n++) {
                                 var r = o.tabs[n];
-                                var url_cur = t.pendingUrl;
-                                if (url_cur == null || url_cur == "") {
-                                        url_cur = t.url;
+                                var url_cur = t.url;
+                                if (url_cur == null || url_cur.length  == 0) {
+                                        url_cur = t.pendingUrl;
                                 }
                                 if (r.active && url_cur && r.url && url_cur.indexOf(r.url) >= 0) {
                                         e = r; break

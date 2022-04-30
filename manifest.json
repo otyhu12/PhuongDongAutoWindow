@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name": "PhuongDongMutiWindown",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"default_locale": "en",
 	"description": "Tự động mở màn hình chờ qua tab mới",
 	"author": "Igor Lino @ ControlExpert",
